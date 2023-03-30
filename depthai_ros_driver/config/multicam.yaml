@@ -1,13 +1,23 @@
-/oak_d_lite:
-    camera_i_mx_id: 18443010C1038C1200
-    camera_i_nn_type: rgb
-    left_i_resolution: '480'
-    right_i_resolution: '480'
-    nn_i_nn_config_path: depthai_ros_driver/yolo
-/oak_d_w:
-    camera_i_mx_id: 19443010D1BFF51200
-    camera_i_nn_type: rgb
-    nn_i_nn_config_path: depthai_ros_driver/segmentation
-/oak_d_pro:
-    camera_i_mx_id: 1944301051FB4D1300
-    nn_i_nn_config_path: depthai_ros_driver/mobilenet
+/camera_front:
+    camera_i_mx_id: 1944301001CE7F1300
+    camera_i_ip: '192.168.111.31'
+    rgb_i_fps: 30.0
+    rgb_i_publish_topic: true
+    rgb_i_height: 1080
+    rgb_i_width: 1920
+    rgb_i_preview_size: 416
+    rgb_i_resolution: '720'
+    camera_i_nn_type: none
+    camera_i_pipeline_type: RGB
+    
+/camera_rear:
+    camera_i_mx_id: 1944301091F7761300
+    camera_i_ip: '192.168.111.32'
+    rgb_i_fps: 30.0
+    rgb_i_publish_topic: true
+    rgb_i_height: 1080
+    rgb_i_width: 1920
+    rgb_i_preview_size: 416
+    rgb_i_resolution: '1080'
+    camera_i_nn_type: none
+    camera_i_pipeline_type: RGB

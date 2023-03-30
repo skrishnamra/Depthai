@@ -1,11 +1,11 @@
 /oak:
-  camera_i_enable_imu: true
-  camera_i_enable_ir: true
+  camera_i_enable_imu: false
+  camera_i_enable_ir: false
   camera_i_floodlight_brightness: 0.0
   camera_i_ip: ''
   camera_i_laser_dot_brightness: 800.0
   camera_i_mx_id: ''
-  camera_i_nn_type: spatial
+  camera_i_nn_type: none
   camera_i_pipeline_type: RGBD
   camera_i_usb_port_id: ''
   camera_i_usb_speed: SUPER_PLUS
@@ -53,8 +53,8 @@
   rgb_i_board_socket_id: 0
   rgb_i_calibration_file: ''
   rgb_i_enable_preview: false
-  rgb_i_fps: 60.0
-  rgb_i_height: 720
+  rgb_i_fps: 30.0
+  rgb_i_height: 1080
   rgb_i_interleaved: true
   rgb_i_keep_preview_aspect_ratio: true
   rgb_i_low_bandwidth: false
@@ -64,7 +64,7 @@
   rgb_i_publish_topic: true
   rgb_i_resolution: '1080'
   rgb_i_set_isp_scale: true
-  rgb_i_width: 1280
+  rgb_i_width: 1920
   rgb_r_exposure: 1000
   rgb_r_focus: 1
   rgb_r_iso: 800

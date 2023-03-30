@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
     <arg name="name" default="oak" />
-    <arg name="params_file" default="$(find depthai_ros_driver)/config/camera.yaml"/>
+    <!-- <arg name="params_file" default="$(find depthai_ros_driver)/config/camera.yaml"/> -->
     <arg name="camera_model" default="OAK-D" />
     <!-- 'zed' or 'zedm' -->
     <arg name="base_frame" default="oak-d_frame" />
@@ -20,7 +20,6 @@
     <arg name="cam_yaw" default="0.0" />
     <!-- Orientation respect to base frame (i.e. "base_link) -->
 
-    <rosparam file="$(arg params_file)" />
 
     <include file="$(find depthai_bridge)/launch/urdf.launch">
         <arg name="base_frame" value="$(arg  name)" />
@@ -39,6 +38,7 @@
         <remap from="/nodelet_manager/load_nodelet" to="$(arg name)/nodelet_manager/load_nodelet"/>
         <remap from="/nodelet_manager/unload_nodelet" to="$(arg name)/nodelet_manager/unload_nodelet"/>
         <remap from="/nodelet_manager/list" to="$(arg name)/nodelet_manager/list"/>
+        <remap from="$(arg name)/rgb/image_raw" to="$(arg name)/rgb_publisher/color/image_raw"/>
     </node>
 
     <node name="$(arg  name)" pkg="nodelet" type="nodelet" output="screen" required="true" args="load depthai_ros_driver/Camera $(arg  name)_nodelet_manager">
